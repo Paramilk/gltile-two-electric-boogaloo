@@ -90,8 +90,7 @@ h2 {
 #content {
     z-index: 10;
     color: #000000;
-    width: 100%;
-    min-width: calc(100% - 50px);
+    width: calc(100% - 50px);
     max-width: 600px;
     margin: auto;
     padding-bottom: 300px;
