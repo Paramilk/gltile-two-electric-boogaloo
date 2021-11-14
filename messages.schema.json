@@ -3,9 +3,10 @@
     "items": {
         "type": "object",
         "properties": {
-            "from": {"type": "number"},
+            "from": {"type": "string"},
             "message": {"type": "string"},
-            "url": {"type": "string"}
+            "url": {"type": "string"},
+            "deletedUser": {"type": "boolean"}
         },
         "additionalProperties": false
     }

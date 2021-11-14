@@ -5,7 +5,7 @@
     width: calc(100% - 100px);
     height: calc(100% - 100px);
     margin: 50px;
-    background: #444444;
+    background: #333333;
     overflow-x: hidden;
     overflow-y: scroll;
     -ms-overflow-style: none;
@@ -107,6 +107,7 @@
     height: fit-content;
     color: #cecece;
     border: 16px solid black;
+    margin-bottom: 48px;
 }
 
 h3 {
@@ -124,12 +125,17 @@ h5 {
     font-weight: inherit;
 }
 
+* {
+    margin: unset; /* wtf */
+}
+
 .description-link {
     color: #ffffff;
 }
 
 .testimonial > h4 {
-    margin: 24px 0;
+    margin: 24px 0 8px 0;
+    line-height: 48px;
 }
 
 .testimonial > div > img {
@@ -143,11 +149,22 @@ h5 {
     order: 2;
     vertical-align: middle;
     line-height: normal;
+    font-size: 24px;
 }
 
 .testimonial > div {
     height: 32px;
     display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.testimonial-right {
+    text-align: right;
+}
+
+.testimonial-right > div {
+    justify-content: flex-end;
 }
 
 #more-content {
@@ -158,7 +175,9 @@ h5 {
 
 .quote-highlight {
     background: black;
-    outline: black solid 4px;
+    outline: black solid 2px;
+    border: black solid 2px;
+    z-index: -1;
 }
 
 @media only screen and (max-width: 800px) {
