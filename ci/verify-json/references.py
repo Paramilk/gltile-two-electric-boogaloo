@@ -10,7 +10,7 @@ def main():
     people = json.load(open(f"{WORKSPACE}/people.json"))
     validation_error = False
 
-    for message in messages():
+    for message in messages:
         if message.get("from") not in people:
             print(f"Invalid from value \"{message.get('from')}\":")
             pprint.pprint(message)
