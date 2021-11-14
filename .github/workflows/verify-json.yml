@@ -22,15 +22,15 @@ jobs:
             - name: Validate JSON schema
               id: schema
               run: |
-                  jsonschema --instance ${{ env.GITHUB_WORKSPACE }}/messages.json ${{ env.GITHUB_WORKSPACE }}/messages.schema.json
-                  jsonschema --instance ${{ env.GITHUB_WORKSPACE }}/people.json ${{ env.GITHUB_WORKSPACE }}/people.schema.json
+                  jsonschema --instance ${{ github.workspace }}/messages.json ${{ github.workspace }}/messages.schema.json
+                  jsonschema --instance ${{ github.workspace }}/people.json ${{ github.workspace }}/people.schema.json
 
             - name: Check messages reference existing users
               if: steps.schema.conclusion == 'success'
               run: |
-                  python3 ${{ env.GITHUB_WORKSPACE }}/ci/verify-json/references.py
+                  python3 ${{ github.workspace }}/ci/verify-json/references.py
 
             - name: Check people have pictures
               if: steps.schema.conclusion == 'success'
               run: |
-                  python3 ${{ env.GITHUB_WORKSPACE }}/ci/verify-json/pictures.py
+                  python3 ${{ github.workspace }}/ci/verify-json/pictures.py
