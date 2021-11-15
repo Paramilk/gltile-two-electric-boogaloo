@@ -1,3 +1,7 @@
+body {
+    background: #444444;
+}
+
 #content {
     position: absolute;
     top: 0;
@@ -107,7 +111,6 @@
     height: fit-content;
     color: #cecece;
     border: 16px solid black;
-    margin-bottom: 48px;
 }
 
 h3 {
@@ -123,6 +126,7 @@ h4 {
 h5 {
     font-size: 24px;
     font-weight: inherit;
+    margin-top: 48px;
 }
 
 * {
@@ -180,6 +184,62 @@ h5 {
     z-index: -1;
 }
 
+.project {
+    background: black;
+    margin: 16px 0;
+    padding: 16px;
+    height: fit-content;
+    width: auto;
+}
+
+.project > p {
+    font-size: 20px;
+}
+
+.project > h4 {
+    margin-bottom: 4px;
+}
+
+.project-goto {
+    color: #e5e5e5;
+    text-decoration: none;
+}
+
+.project-arrow {
+    display: inline-block;
+    transition: 0.2s ease;
+}
+
+.project-goto:hover .project-arrow {
+    transform: translateX(4px);
+}
+
+.project-goto:hover {
+    text-decoration: underline;
+}
+
+#footer {
+    background: black;
+}
+
+#inner-footer {
+    margin: auto;
+    max-width: 800px;
+    padding: 26px 48px;
+}
+
+#inner-footer > h3 {
+    margin-bottom: 8px;
+}
+
+#inner-footer > p > a {
+    color: white;
+}
+
+#inner-footer > p > .project-goto {
+    color: #e5e5e5;
+}
+
 @media only screen and (max-width: 800px) {
     #header {
         visibility: hidden;
@@ -191,5 +251,26 @@ h5 {
         width: 100%;
         height: 100%;
         margin: 0;
+    }
+
+    .testimonial > div > span {
+        order: 2;
+        vertical-align: middle;
+        line-height: normal;
+        font-size: 16px;
+    }
+
+    .testimonial > h4 {
+        margin: 24px 0 8px 0;
+        line-height: 32px;
+        font-size: 24px;
+    }
+
+    .project > h4 {
+        font-size: 24px;
+    }
+
+    .project > p {
+        font-size: 18px;
     }
 }
