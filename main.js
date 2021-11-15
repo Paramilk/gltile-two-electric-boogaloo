@@ -49,4 +49,3 @@ Promise.all([
         document.getElementById("testimonials").innerHTML += template
     })
 })
-
