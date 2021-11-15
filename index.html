@@ -5,38 +5,69 @@
     <title>gltile.ml</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="gltile.ml" property="og:title">
-    <meta content="hey. i'm gltile." property="og:description">
+    <meta content="gltile is an amazing* programmer" property="og:description">
     <meta content="#ffffff" data-react-helmet="true" name="theme-color">
-    <meta content="hey. i'm gltile." name="description">
+    <meta content="gltile is an amazing* programmer" name="description">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Inter&display=swap">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&display=swap"></noscript>
+    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"></noscript>
     <link rel="stylesheet" href="style.css">
     <script src="main.js" async defer></script>
 </head>
 <body>
-<div id="content">
-    <h1 id="header">hello there.</h1>
-    <p>
-        i'm gltile. my pronouns are they/them, and I live in the <a href="https://en.wikipedia.org/wiki/Landfill">United Kingdom.</a>
-        i mostly use <a href="https://www.python.org/">Python</a>, however I know <a href="https://www.lua.org/">Lua</a> and have limited experience with <a href="https://en.wikipedia.org/wiki/Esoteric_programming_language">Java.</a>
-    </p>
-    <p>
-        i like robots.
-    </p>
-    <h2><span class="line-text">VIEW ME</span></h2>
-    <div id="repo-div">
-        <noscript><p>You can't see this because you don't have JavaScript enabled.</p></noscript>
+    <div id="content">
+        <h1 class="header" id="header">
+            THE END IS NEAR THE END IS NEAR THE END IS NEAR THE END IS NEAR<br>END IS NEAR THE END IS NEAR THE END IS NEAR THE END IS NEAR THE<br>IS NEAR THE END IS NEAR THE END IS NEAR THE END IS NEAR THE END<br>THE END IS <span class="header-highlight">&thinsp;HELLO.&thinsp;</span> THE END IS<br>THE END IS NEAR THE END IS NEAR THE END IS NEAR THE END IS NEAR<br>END IS NEAR THE END IS NEAR THE END IS NEAR THE END IS NEAR THE<br>IS NEAR THE END IS NEAR THE END IS NEAR THE END IS NEAR THE END<br>
+        </h1>
+        <h1 class="header" id="header-mobile">
+            THE END IS NEAR THE END IS NEAR THE END IS NEAR<br>END IS NEAR THE END IS NEAR THE END IS NEAR THE<br>IS NEAR THE END IS NEAR THE END IS NEAR THE END<br>NEAR THE END IS NEAR THE END IS NEAR THE END IS<br>THE END IS NEAR THE END IS NEAR THE END IS NEAR<br>END IS NEAR THE END IS NEAR THE END IS NEAR THE<br>IS NEAR THE END IS NEAR THE END IS NEAR THE END<br>NEAR THE END IS NEAR THE END IS NEAR THE END IS<br>THE END IS NEAR THE END IS <span class="header-highlight">&thinsp;HELLO.&thinsp;</span> THE END IS NEAR THE END IS<br>THE END IS NEAR THE END IS NEAR THE END IS NEAR<br>END IS NEAR THE END IS NEAR THE END IS NEAR THE<br>IS NEAR THE END IS NEAR THE END IS NEAR THE END<br>NEAR THE END IS NEAR THE END IS NEAR THE END IS<br>THE END IS NEAR THE END IS NEAR THE END IS NEAR<br>END IS NEAR THE END IS NEAR THE END IS NEAR THE<br>IS NEAR THE END IS NEAR THE END IS NEAR THE END<br>NEAR THE END IS NEAR THE END IS NEAR THE END IS
+        </h1>
+        <svg id="scroll" class="scroll-visible" width="48" height="64" viewBox="0 0 48 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <text x="0" y="22" style="font-family: Inter, sans-serif; font-size: 18px; height: 22px; width: 48px; fill: white;">Scroll</text>
+            <path id="arrow" d="M22.9393 63.0607C23.5251 63.6464 24.4749 63.6464 25.0607 63.0607L34.6066 53.5147C35.1924 52.9289 35.1924 51.9792 34.6066 51.3934C34.0208 50.8076 33.0711 50.8076 32.4853 51.3934L24 59.8787L15.5147 51.3934C14.9289 50.8076 13.9792 50.8076 13.3934 51.3934C12.8076 51.9792 12.8076 52.9289 13.3934 53.5147L22.9393 63.0607ZM22.5 37L22.5 62H25.5L25.5 37H22.5Z" fill="white"/>
+        </svg>
+
+        <div id="sanity" style=""></div>
+        <div id="more-content">
+            <h3 class="div-highlighted" id="description"><a class="description-link" href="https://twitter.com/gltile">gltile</a> is a <a class="description-link" href="javascript:document.getElementById('testimonials').scrollIntoView()">really good programmer</a> from the <a href="https://en.wikipedia.org/wiki/Landfill" class="description-link">United Kingdom</a>.</h3>
+            <h5>testimonials</h5>
+            <div id="testimonials"></div>
+            <h5>projects</h5>
+            <div id="projects">
+                <div class="project">
+                    <h4>gltile.ml</h4>
+                    <p>
+                        You're here right now.<br>
+                        <br>
+                        <a class="project-goto" href="javascript:location.reload()">Go to project<span class="project-arrow">&nbsp;-></span></a><br>
+                        <a class="project-goto" href="https://github.com/gltile-two-electric-boogaloo/gltile-two-electric-boogaloo">Go to source<span class="project-arrow">&nbsp;-></span></a><br>
+                    </p>
+                </div>
+                <div class="project">
+                    <h4>thoughtfloat rip-off</h4>
+                    <p>
+                        This project used a MongoDB database in order to store and retrieve user generated "thoughts".
+                        The thoughts were displayed underneath the text entry box, and there was no way to know who posted it. Scary.<br>
+                        <br>
+                        The website is long dead. You can try visit it if you want, but the Cloud Run instances are set to deny all traffic.<br>
+                        <br>
+                        <a class="project-goto" href="https://htp.gltile.ml/">Go to project<span class="project-arrow">&nbsp;-></span></a><br>
+                        <a class="project-goto" href="https://github.com/gltile-two-electric-boogaloo/thoughtfloat">Go to source<span class="project-arrow">&nbsp;-></span></a><br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="inner-footer">
+                <h3>gltile.ml</h3>
+                <p>
+                    This website is licensed under the <a href="http://www.wtfpl.net/about/">WTFPL</a>. This means you are free to "do what the fuck you want to". It's in the name.<br>
+                    <br>
+                    <a class="project-goto" href="javascript:document.getElementById('content').scrollTo({top: 0})">Go to top<span class="project-arrow">&nbsp;-></span></a>
+                </p>
+            </div>
+        </div>
     </div>
-    <h2><span class="line-text">STALK ME</span></h2>
-    <p>
-        twitter: <a href="https://twitter.com/gltile">@gltile</a><br>
-        github: <a href="https://github.com/gltile-two-electric-boogaloo">gltile-two-electric-boogaloo</a><br>
-        reddit: <a href="https://www.reddit.com/user/gltile">u/gltile</a><br>
-        discord: gltile#9411<br>
-        website: <a href="/">hi!</a>
-    </p>
-</div>
 </body>
 </html>
