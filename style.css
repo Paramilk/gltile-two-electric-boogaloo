@@ -77,14 +77,14 @@ body {
 
 @keyframes arrow-animate {
     50% {
-        transform: translateY(8px);
+        transform: translateY(8px) rotate(90deg);
     }
     to {
-        transform: translateY(0px);
+        transform: translateY(2px) rotate(90deg);
     }
 }
 
-#scroll > #arrow {
+#arrow {
     animation-duration: 2s;
     animation-timing-function: cubic-bezier(.42,0,.58,1);
     animation-name: arrow-animate;
