@@ -11,8 +11,6 @@ body {
     background: #333333;
     overflow-x: hidden;
     overflow-y: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
 
     /* what the fuck CSS */
     -webkit-touch-callout: none;
@@ -25,10 +23,6 @@ body {
     font-family: "Inter", sans-serif;
     color: white;
     font-weight: 600;
-}
-
-#content::-webkit-scrollbar {
-    display: none;
 }
 
 .header-highlight {
@@ -195,8 +189,19 @@ h5 {
     font-size: 20px;
 }
 
-.project > h4 {
+.project-flex > h4 {
     margin-bottom: 4px;
+    font-size: 28px;
+}
+
+.project-flex > p {
+    font-size: 20px;
+    color: #e5e5e5;
+}
+
+.project-flex {
+    display: flex;
+    justify-content: space-between;
 }
 
 .project-goto {
@@ -265,7 +270,7 @@ h5 {
         font-size: 24px;
     }
 
-    .project > h4 {
+   .project > .project-flex > h4 {
         font-size: 24px;
     }
 
