@@ -9,7 +9,6 @@ document.getElementById("content").addEventListener("scroll", () => {
 
     if (currentScroll !== newState) {
         currentScroll = newState
-        console.log(newState)
         if (currentScroll) {
             document.getElementById("scroll").setAttribute("class", "scroll-visible")
         } else {
@@ -19,13 +18,12 @@ document.getElementById("content").addEventListener("scroll", () => {
 })
 
 window.addEventListener('resize', callAndReturn(() => {
-    let newState = window.innerWidth >= 800
+    let newState = window.innerWidth > 800
 
     if (isDesktop !== newState) {
         isDesktop = newState
-        let header = document.getElementById(isDesktop ? "header" : "header-mobile")
         let sanity = document.getElementById("sanity")
-        sanity.setAttribute("style", `height: ${header.offsetHeight - header.offsetTop + Number(window.getComputedStyle(header)['font-size'].split("px")[0])}px`)
+        sanity.setAttribute("style", `height: ${isDesktop ? 1036 : 1136}px`)
     }
 }))
 
@@ -36,7 +34,6 @@ Promise.all([
     return [JSON.parse(await data[0].text()), JSON.parse(await data[1].text())]
 }).then((data) => {
     const [messages, people] = data
-    let isRight = false
     shuffle(messages).slice(0, 5).forEach((message) => {
         const messageText = message['message'].replaceAll("[", '<span class="quote-highlight">').replaceAll("]", '</span>')
         const person = people[message['from']]
