@@ -33,7 +33,7 @@ jobs:
                   mv ./website/* .
                   git stash
                   git fetch origin
-                  git checkout -b gh-pages origin/gh-pages
+                  git checkout -f -b gh-pages origin/gh-pages
                   git merge --strategy-option=ours --no-commit --allow-unrelated-histories stash
                   git add .
                   git commit -m "Deploy to GitHub Pages \(${{ github.event.release.tag_name }}\)"
