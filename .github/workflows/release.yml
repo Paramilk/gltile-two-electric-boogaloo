@@ -35,6 +35,7 @@ jobs:
                   git stash
                   git fetch origin
                   git checkout -f -b gh-pages origin/gh-pages
+                  rm -r ${{ github.workspace }}/*
                   git merge -s ours stash --no-commit --allow-unrelated-histories
                   git add .
                   git commit -m "Deploy to GitHub Pages \(${{ github.event.release.tag_name }}\)"
