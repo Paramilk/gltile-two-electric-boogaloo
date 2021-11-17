@@ -23,7 +23,7 @@ jobs:
 
             - name: Run before release scripts
               run: |
-                  ls ${{ github.workspace }}/ci/release | xargs python3
+                  find ${{ github.workspace }}/ci/release -iname "*.py" | xargs python3
 
             - name: Deploy to GitHub Pages
               run: |
