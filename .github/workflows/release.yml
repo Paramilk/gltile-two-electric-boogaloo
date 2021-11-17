@@ -31,12 +31,10 @@ jobs:
                   git config user.name github-actions
                   git config user.email github-actions@github.com
                   shopt -s extglob
-                  mv ./website/* .
-                  git stash
-                  git fetch origin
+                  mv ${{ github.workspace }}/website ~
                   git checkout -f -b gh-pages origin/gh-pages
                   rm -r ${{ github.workspace }}/*
-                  git merge -s ours stash --no-commit --allow-unrelated-histories
+                  mv ~/website ${{ github.workspace }}
                   git add .
-                  git commit -m "Deploy to GitHub Pages \(${{ github.event.release.tag_name }}\)"
+                  git commit -m "Deploy to GitHub Pages (${{ github.event.release.tag_name }})"
                   git push --set-upstream origin gh-pages
