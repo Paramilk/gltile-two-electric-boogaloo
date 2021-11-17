@@ -1,0 +1,64 @@
+<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+    <foreignObject x="0" y="0" width="300" height="200">
+        <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+            <head>
+                <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&amp;display=swap" rel="stylesheet"/>
+                <title>gltile</title>
+                <style>
+                    * {
+                        font-family: 'Inter', sans-serif;
+                        color: white;
+                    }
+
+                    body {
+                        background: #333333;
+                    }
+
+                    #header {
+                        font-size: 24px;
+                        color: #cecece;
+                        background: black;
+                        outline: black solid 8px;
+
+                        height: fit-content;
+                        width: fit-content;
+                    }
+
+                    #header > a {
+                        color: white;
+                    }
+
+                    body > a {
+                        font-size: 18px;
+                        color: #cecece;
+                        text-decoration: none;
+                    }
+
+                    body > a:hover > .arrow {
+                        transform: translateX(4px);
+                    }
+
+                    .arrow {
+                        display: inline-block;
+                        transition: 0.2s ease;
+                        color: #cecece;
+                    }
+
+                    p {
+                        color: #cecece;
+                        font-size: 12px;
+                    }
+                </style>
+            </head>
+            <body>
+            <h3 id="header"><a href="https://gltile.ml/">gltile</a> is a <a href="https://gltile.ml/#description">really good programmer</a> from the <a href="https://en.wikipedia.org/wiki/Landfill">United Kingdom</a>.</h3>
+            <a href="https://gltie.ml">
+                Go to website <span class="arrow">-></span>
+            </a>
+            <p>
+                disclosure: not actually good
+            </p>
+            </body>
+        </html>
+    </foreignObject>
+</svg>
