@@ -37,7 +37,7 @@ jobs:
                   ls ${{ github.workspace }} | xargs rm -rf
                   mv ~/.git ${{ github.workspace }}
                   mv ~/website ${{ github.workspace }}
-                  ls ${{ github.workspace }} | xargs -I {} mv {} .
+                  ls ${{ github.workspace }}/website | xargs -I {} mv {} .
                   git add .
                   git commit -m "Deploy to GitHub Pages (${{ github.event.release.tag_name }})"
                   git push --set-upstream origin gh-pages
