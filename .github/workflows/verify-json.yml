@@ -31,9 +31,9 @@ jobs:
             - name: Check messages reference existing users
               if: steps.schema.conclusion == 'success'
               run: |
-                  python3 ${{ github.workspace }}/website/ci/verify-json/references.py
+                  python3 ${{ github.workspace }}/ci/verify-json/references.py
 
             - name: Check people have pictures
               if: steps.schema.conclusion == 'success'
               run: |
-                  python3 ${{ github.workspace }}/website/ci/verify-json/pictures.py
+                  python3 ${{ github.workspace }}/ci/verify-json/pictures.py
