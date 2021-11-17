@@ -1,5 +1,6 @@
 import pathlib
 import os
+import shutil
 
 WORKSPACE = pathlib.Path(os.environ['GITHUB_WORKSPACE'])
 
@@ -10,7 +11,7 @@ def main():
             continue
 
         print(f"Removing {file.absolute()}")
-        os.remove(file)
+        shutil.rmtree(file, ignore_errors=True)
 
 
 if __name__ == "__main__":
