@@ -32,6 +32,7 @@ jobs:
                   git config user.email github-actions@github.com
                   shopt -s extglob
                   mv ${{ github.workspace }}/website ~
+                  git fetch
                   git checkout -f -b gh-pages origin/gh-pages
                   mv ${{ github.workspace }}/.git ~
                   rm -r ${{ github.workspace }}/*
