@@ -34,8 +34,9 @@ jobs:
                   mv ./website/* .
                   git stash
                   git fetch origin
-                  git symbolic-ref HEAD refs/heads/gh-pages
-                  git reset
+                  git checkout -b gh-pages origin/gh-pages
+                  git stash show -p | git apply
+                  git stash drop
                   git add .
                   git commit -m "Deploy to GitHub Pages \(${{ github.event.release.tag_name }}\)"
                   git push --set-upstream origin gh-pages
