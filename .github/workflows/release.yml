@@ -31,7 +31,8 @@ jobs:
                   git config user.email github-actions@github.com
                   mv ./website/* .
                   git stash
-                  git checkout gh-pages
+                  git fetch origin
+                  git checkout -b gh-pages origin/gh-pages
                   git merge --strategy-option=ours --no-commit stash
                   git add .
                   git commit -m "Deploy to GitHub Pages"
