@@ -33,7 +33,9 @@ jobs:
                   shopt -s extglob
                   mv ${{ github.workspace }}/website ~
                   git checkout -f -b gh-pages origin/gh-pages
+                  mv ${{ github.workspace }}/.git ~
                   rm -r ${{ github.workspace }}/*
+                  mv ~/.git ${{ github.workspace }}
                   mv ~/website ${{ github.workspace }}
                   git add .
                   git commit -m "Deploy to GitHub Pages (${{ github.event.release.tag_name }})"
