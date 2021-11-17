@@ -35,8 +35,7 @@ jobs:
                   git stash
                   git fetch origin
                   git checkout -f -b gh-pages origin/gh-pages
-                  git stash show -p | git apply
-                  git stash drop
+                  git merge -s ours stash --no-commit
                   git add .
                   git commit -m "Deploy to GitHub Pages \(${{ github.event.release.tag_name }}\)"
                   git push --set-upstream origin gh-pages
