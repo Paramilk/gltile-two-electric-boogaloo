@@ -34,7 +34,7 @@ jobs:
                   mv ./website/* .
                   git stash
                   git fetch origin
-                  git checkout -b gh-pages origin/gh-pages
+                  git checkout -f -b gh-pages origin/gh-pages
                   git stash show -p | git apply
                   git stash drop
                   git add .
