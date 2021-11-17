@@ -38,4 +38,4 @@ jobs:
                   git reset
                   git add .
                   git commit -m "Deploy to GitHub Pages \(${{ github.event.release.tag_name }}\)"
-                  git push
+                  git push --set-upstream origin gh-pages
