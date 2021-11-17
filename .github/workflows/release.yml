@@ -30,12 +30,11 @@ jobs:
               run: |
                   git config user.name github-actions
                   git config user.email github-actions@github.com
-                  shopt -s extglob
                   mv ${{ github.workspace }}/website ~
                   git fetch
                   git checkout -f -b gh-pages origin/gh-pages
                   mv ${{ github.workspace }}/.git ~
-                  rm -r ${{ github.workspace }}/*
+                  find ${{ github.workspace }} -mindepth 1 -maxdepth 1 | xargs rm -rf
                   mv ~/.git ${{ github.workspace }}
                   mv ~/website ${{ github.workspace }}
                   git add .
