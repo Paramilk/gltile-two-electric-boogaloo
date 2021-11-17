@@ -1,5 +1,8 @@
 name: verify-json
-on: [push]
+on:
+    push:
+        branches:
+            - main
 jobs:
     schema-conform:
         name: Validate JSON
@@ -22,15 +25,15 @@ jobs:
             - name: Validate JSON schema
               id: schema
               run: |
-                  jsonschema --instance ${{ github.workspace }}/messages.json ${{ github.workspace }}/messages.schema.json
-                  jsonschema --instance ${{ github.workspace }}/people.json ${{ github.workspace }}/people.schema.json
+                  jsonschema --instance ${{ github.workspace }}/website/messages.json ${{ github.workspace }}/website/messages.schema.json
+                  jsonschema --instance ${{ github.workspace }}/website/people.json ${{ github.workspace }}/website/people.schema.json
 
             - name: Check messages reference existing users
               if: steps.schema.conclusion == 'success'
               run: |
-                  python3 ${{ github.workspace }}/ci/verify-json/references.py
+                  python3 ${{ github.workspace }}/website/ci/verify-json/references.py
 
             - name: Check people have pictures
               if: steps.schema.conclusion == 'success'
               run: |
-                  python3 ${{ github.workspace }}/ci/verify-json/pictures.py
+                  python3 ${{ github.workspace }}/website/ci/verify-json/pictures.py
