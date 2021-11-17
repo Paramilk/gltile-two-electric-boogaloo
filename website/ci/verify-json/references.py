@@ -6,8 +6,8 @@ WORKSPACE = os.environ['GITHUB_WORKSPACE']
 
 
 def main():
-    messages = json.load(open(f"{WORKSPACE}/messages.json"))
-    people = json.load(open(f"{WORKSPACE}/people.json"))
+    messages = json.load(open(f"{WORKSPACE}/website/messages.json"))
+    people = json.load(open(f"{WORKSPACE}/website/people.json"))
     validation_error = False
 
     for message in messages:

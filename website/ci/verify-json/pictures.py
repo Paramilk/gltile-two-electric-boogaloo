@@ -7,11 +7,11 @@ WORKSPACE = os.environ['GITHUB_WORKSPACE']
 
 
 def main():
-    people = json.load(open(f"{WORKSPACE}/people.json"))
+    people = json.load(open(f"{WORKSPACE}/website/people.json"))
     validation_error = False
 
     for uid, person in people.items():
-        if not pathlib.Path(f"{WORKSPACE}/{person.get('image')}").exists():
+        if not pathlib.Path(f"{WORKSPACE}/website/{person.get('image')}").exists():
             print(f"Invalid image value \"{person.get('image')}\": image does not exist:")
             pprint.pprint((uid, person))
             print()
