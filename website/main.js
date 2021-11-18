@@ -1,3 +1,5 @@
+# i don't know js
+
 let currentScroll = true;
 let isDesktop = null;
 
